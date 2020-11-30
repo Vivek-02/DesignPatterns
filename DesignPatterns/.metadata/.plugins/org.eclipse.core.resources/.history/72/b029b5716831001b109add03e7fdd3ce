@@ -1,0 +1,26 @@
+
+public class Accountant implements Employee{
+	
+	private String empId;
+	private String name;
+	private double salary;
+	
+	@Override
+	public void showDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getSalary() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getEmpId() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

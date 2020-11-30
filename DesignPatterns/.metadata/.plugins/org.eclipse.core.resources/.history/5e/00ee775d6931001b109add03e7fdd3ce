@@ -1,0 +1,10 @@
+
+public class CompanayDirectory implements Employee {
+
+	@Override
+	public void showDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

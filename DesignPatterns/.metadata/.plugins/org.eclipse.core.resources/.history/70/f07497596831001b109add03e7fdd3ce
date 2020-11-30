@@ -1,0 +1,28 @@
+
+public class Manager implements Employee{
+	
+	private String empId;
+	private String name;
+	private double salary;
+	
+	
+	@Override
+	public String toString() {
+		return "Manager [empId=" + empId + ", name=" + name + ", salary=" + salary + "]";
+	}
+	@Override
+	public void showDetails() {
+		// TODO Auto-generated method stub
+		System.out.println(toString());
+	}
+	@Override
+	public double getSalary() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void getEmpId() {
+		// TODO Auto-generated method stub
+		
+	}
+}

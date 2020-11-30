@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str1 = "";
+		String str2 = "abe";
+		System.out.println((int)'z');
+	}
+	
+	public static String getSmallestString(int n, int k) {
+        int sum=0;
+        String str="";
+        char c='a';
+        while(sum<=k && str.length()<=n){
+            str+=c;
+            sum+=c-'a'+1;
+            
+            if(sum<k && str.length()==n){
+                str=str.substring(0, str.length()-1);
+                sum-=c-'a'+1;
+                c++;
+            }
+        }
+        
+        
+        return str.substring(0, str.length()-1);
+    }
+
+}
