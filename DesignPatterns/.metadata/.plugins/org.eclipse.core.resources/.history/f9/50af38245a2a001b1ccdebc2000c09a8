@@ -1,6 +1,0 @@
-
-public class Car {
-	private String name;
-	private double price;
-	private String registrationNumber;
-}

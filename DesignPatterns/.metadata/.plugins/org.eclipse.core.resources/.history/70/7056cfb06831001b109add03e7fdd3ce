@@ -1,7 +1,0 @@
-
-public interface Employee {
-	
-	void showDetails();
-	double getSalary(String empId);
-	String getEmpId();
-}
