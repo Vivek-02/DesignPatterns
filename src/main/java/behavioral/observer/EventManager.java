@@ -7,22 +7,25 @@ import java.util.Set;
 
 public class EventManager {
 
-    private Map<String, Set<EventListener>> map;
+    private Set<EventListener> set = new HashSet<>();
+    private String message;
 
-    public void subscribe(String event, EventListener listener) {
-        if(map.containsKey(event))
-            map.get(event).add(listener);
-        else
-            map.put(event, new HashSet<>(Collections.singleton(listener)));
+    public void addListener(EventListener listener) {
+        set.add(listener);
     }
 
-    public void unsubscribe(String event, EventListener listener) {
-        map.get(event).remove(listener);
+    public void removeListener(EventListener listener) {
+        set.remove(listener);
     }
 
-    public void notify(String event, String message) {
-        for(EventListener eventListener : map.get(event)) {
-            eventListener.update(message);
+    public void notifyListeners() {
+        for(EventListener listener : set) {
+            listener.update(message);
         }
+    }
+
+    public void setMessage(String newMessage) {
+        this.message = newMessage;
+        notifyListeners();
     }
 }

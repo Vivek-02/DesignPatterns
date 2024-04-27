@@ -1,6 +1,6 @@
 package behavioral.observer;
 
-public class EmailListener implements EventListener {
+public class PushMessageListener implements EventListener {
     private String message;
 
     @Override
@@ -10,6 +10,7 @@ public class EmailListener implements EventListener {
     }
 
     private void display() {
-        System.out.println("Email message received -> "+message);
+        System.out.println("Push message received -> "+message);
     }
+
 }

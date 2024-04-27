@@ -2,5 +2,5 @@ package behavioral.observer;
 
 public interface EventListener {
 
-    void update(String filename);
+    void update(String message);
 }
